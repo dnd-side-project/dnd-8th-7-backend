@@ -1,16 +1,15 @@
 package com.dnd8th.service;
 
-import com.dnd8th.dao.BlockFindDao;
-import com.dnd8th.dao.BlockUpdateDao;
-import com.dnd8th.dao.ReviewFindDao;
-import com.dnd8th.dao.UserFindDao;
+import com.dnd8th.dao.block.BlockFindDao;
+import com.dnd8th.dao.block.BlockUpdateDao;
+import com.dnd8th.dao.review.ReviewFindDao;
 import com.dnd8th.dto.block.BlockCreateRequest;
+import com.dnd8th.dto.block.BlockGetResponse;
 import com.dnd8th.dto.block.BlockMainGetResponse;
 import com.dnd8th.dto.block.BlockPartDto;
 import com.dnd8th.dto.block.BlockSumDto;
 import com.dnd8th.dto.block.BlockUpdateRequest;
 import com.dnd8th.dto.block.BlockWeekPartResponse;
-import com.dnd8th.dto.block.BlockGetResponse;
 import com.dnd8th.dto.task.TaskPartDto;
 import com.dnd8th.dto.task.TaskSumDto;
 import com.dnd8th.entity.Block;

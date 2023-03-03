@@ -1,8 +1,8 @@
 package com.dnd8th.service;
 
 import com.dnd8th.auth.jwt.JwtProviderService;
-import com.dnd8th.dao.UserFindDao;
-import com.dnd8th.dao.UserUpdateDao;
+import com.dnd8th.dao.user.UserFindDao;
+import com.dnd8th.dao.user.UserUpdateDao;
 import com.dnd8th.dto.auth.UserLoginRequest;
 import com.dnd8th.dto.auth.UserSignUpResponse;
 import com.dnd8th.dto.user.UserGetDto;

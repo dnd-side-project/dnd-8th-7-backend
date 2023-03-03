@@ -1,4 +1,4 @@
-package com.dnd8th.dao;
+package com.dnd8th.dao.block;
 
 import static com.dnd8th.entity.QBlock.block;
 

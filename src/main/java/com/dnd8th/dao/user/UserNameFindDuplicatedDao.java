@@ -1,4 +1,4 @@
-package com.dnd8th.dao;
+package com.dnd8th.dao.user;
 
 import static com.dnd8th.entity.QUser.user;
 

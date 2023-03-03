@@ -1,6 +1,6 @@
 package com.dnd8th.api;
 
-import com.dnd8th.dao.UserNameFindDuplicatedDao;
+import com.dnd8th.dao.user.UserNameFindDuplicatedDao;
 import com.dnd8th.dto.user.UserGetDto;
 import com.dnd8th.dto.user.UserGetResponse;
 import com.dnd8th.dto.user.UserNameDuplicatedResponse;

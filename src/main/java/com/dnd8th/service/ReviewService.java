@@ -1,6 +1,6 @@
 package com.dnd8th.service;
 
-import com.dnd8th.dao.ReviewUpdateDao;
+import com.dnd8th.dao.review.ReviewUpdateDao;
 import com.dnd8th.dto.review.ReviewCreateRequest;
 import com.dnd8th.dto.review.ReviewGetResponse;
 import com.dnd8th.dto.review.ReviewUpdateRequest;
@@ -38,7 +38,8 @@ public class ReviewService {
 
     public void deleteReview(String userEmail, Long reviewId) {
         User user = userRepository.findByEmail(userEmail).orElseThrow(UserNotFoundException::new);
-        Review review = reviewRepository.findById(reviewId).orElseThrow(ReviewNotFoundException::new);
+        Review review = reviewRepository.findById(reviewId)
+                .orElseThrow(ReviewNotFoundException::new);
         User reviewOwner = review.getUser();
         if (reviewOwner != user) {
             throw new ReviewAccessDeniedException();
@@ -48,7 +49,8 @@ public class ReviewService {
 
     public ReviewGetResponse getReview(String userEmail, Long reviewId) {
         User user = userRepository.findByEmail(userEmail).orElseThrow(UserNotFoundException::new);
-        Review review = reviewRepository.findById(reviewId).orElseThrow(ReviewNotFoundException::new);
+        Review review = reviewRepository.findById(reviewId)
+                .orElseThrow(ReviewNotFoundException::new);
         User reviewOwner = review.getUser();
         if (reviewOwner != user) {
             throw new ReviewAccessDeniedException();
@@ -62,9 +64,11 @@ public class ReviewService {
         return reviewGetResponse;
     }
 
-    public void updateReview(String userEmail, Long reviewId, ReviewUpdateRequest reviewUpdateRequest) {
+    public void updateReview(String userEmail, Long reviewId,
+            ReviewUpdateRequest reviewUpdateRequest) {
         User user = userRepository.findByEmail(userEmail).orElseThrow(UserNotFoundException::new);
-        Review review = reviewRepository.findById(reviewId).orElseThrow(ReviewNotFoundException::new);
+        Review review = reviewRepository.findById(reviewId)
+                .orElseThrow(ReviewNotFoundException::new);
         User reviewOwner = review.getUser();
         if (reviewOwner != user) {
             throw new ReviewAccessDeniedException();

@@ -1,4 +1,6 @@
-package com.dnd8th.dao;
+package com.dnd8th.dao.user;
+
+import static com.dnd8th.entity.QUser.user;
 
 import com.dnd8th.dto.user.UserGetDto;
 import com.querydsl.jpa.impl.JPAQueryFactory;
@@ -6,8 +8,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import static com.dnd8th.entity.QUser.user;
 
 @Service
 @Slf4j

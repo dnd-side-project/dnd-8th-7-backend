@@ -1,7 +1,7 @@
 package com.dnd8th.service;
 
 
-import com.dnd8th.dao.TaskUpdateDao;
+import com.dnd8th.dao.task.TaskUpdateDao;
 import com.dnd8th.dto.task.TaskCreateRequest;
 import com.dnd8th.entity.Block;
 import com.dnd8th.entity.Task;
